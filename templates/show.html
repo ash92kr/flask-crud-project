@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>영화 정보 조회</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %} 영화 정보 조회 {% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block body %}
+
     <br><br>
     제목(한글) : {{ movie.title }}<br>
     제목(영어) : {{ movie.title_en }}<br>
@@ -21,5 +23,5 @@
     <a href="/movies/">목록</a>
     <a href="/movies/{{movie.id}}/edit/">수정</a>
     <a href="/movies/{{movie.id}}/delete/">삭제</a>
-</body>
-</html>
+    
+{% endblock %}
