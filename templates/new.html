@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>영화 정보 생성 Form</title>
+</head>
+<body>
+    <form action="/movies/create/">
+        제목(한글) : <input type="text" name="title"/><br>
+        제목(영어) : <input type="text" name="title_en"/><br>
+        관객수 : <input type="number" name="audience"/><br>
+        개봉일 : <input type="date" name="open_date"/><br>
+        장르 : <input type="text" name="genre"/><br>
+        이용등급 : <input type="text" name="watch_grade"/><br>
+        평점 : <input type="number" name="score"/><br>
+        이미지 URL : <input type="text" name="poster_url"/><br>
+        영화 설명 : <textarea name="description"></textarea><br>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
