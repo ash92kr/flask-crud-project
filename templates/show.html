@@ -4,24 +4,44 @@
 
 {% block head %}
     {{ super() }}
-
+    
+    <style>
+    label {
+        font-weight: bold;
+    }
+    </style>
+    
 {% endblock %}
 
 {% block body %}
 
     <br><br>
-    제목(한글) : {{ movie.title }}<br>
-    제목(영어) : {{ movie.title_en }}<br>
-    관객수 : {{ movie.audience }}<br>
-    개봉일 : {{ movie.open_date }}<br>
-    장르 : {{ movie.genre }}<br>
-    이용등급 : {{ movie.watch_grade }}<br>
-    평점 : {{ movie.score }}<br>
-    이미지 url : {{ movie.poster_url }}<br>
-    영화 설명 : {{ movie.description }}<br><br>
-
-    <a href="/movies/">목록</a>
-    <a href="/movies/{{movie.id}}/edit/">수정</a>
-    <a href="/movies/{{movie.id}}/delete/">삭제</a>
+    <h2 style="text-align: center;">영화 정보 조회</h2><br>
+    
+    <div style="text-align: center; verticle-align: center;">
+        모든 항목을 필수로 입력해야 submit이 가능합니다!!!<br><br>
+        <label>제목(한글)</label><br>
+        <input type="text" value="{{movie.title}}"><br>
+        <label>제목(영어)</label><br>
+        <input type="text" value="{{movie.title_en}}"><br>
+         <label>관객수</label><br>
+        <input type="text" value="{{movie.audience}}"><br>
+         <label>개봉일</label><br>
+        <input type="text" value="{{movie.open_date}}"><br>
+         <label>장르</label><br>
+        <input type="text" value="{{movie.genre}}"><br>
+         <label>이용등급</label><br>
+        <input type="text" value="{{movie.watch_grade}}"><br>
+         <label>평점</label><br>
+        <input type="text" value="{{movie.score}}"><br>
+         <label>이미지 url</label><br>
+        <input type="text" value="{{movie.poster_url}}"><br>
+         <label>영화 설명</label><br>
+        <input type="text" value="{{movie.description}}"><br>
+    
+        <a href="/movies/">목록</a>
+        <a href="/movies/{{movie.id}}/edit/">수정</a>
+        <a href="/movies/{{movie.id}}/delete/">삭제</a>
+    </div>
     
 {% endblock %}

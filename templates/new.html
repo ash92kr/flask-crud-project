@@ -14,16 +14,28 @@
     <hr color="black">
 
     <form action="/movies/create/">
-        제목(한글) : <input type="text" name="title"/><br>
-        제목(영어) : <input type="text" name="title_en"/><br>
-        관객수 : <input type="number" name="audience"/><br>
-        개봉일 : <input type="date" name="open_date"/><br>
-        장르 : <input type="text" name="genre"/><br>
-        이용등급 : <input type="text" name="watch_grade"/><br>
-        평점 : <input type="number" name="score"/><br>
-        이미지 URL : <input type="text" name="poster_url"/><br>
-        영화 설명 : <textarea name="description"></textarea><br>
-        <input type="submit" value="Submit"/>
+        <div style="text-align: center;">
+            모든 항목을 필수로 입력해야 submit이 가능합니다!!!<br><br>
+            제목(한글)<br>
+            <input type="text" name="title"/><br>
+            제목(영어)<br>
+            <input type="text" name="title_en"/><br>
+            관객수<br>
+            <input type="number" name="audience"/><br>
+            개봉일<br>
+            <input type="date" name="open_date"/><br>
+            장르<br>
+            <input type="text" name="genre"/><br>
+            이용등급<br>
+            <input type="text" name="watch_grade"/><br>
+            평점<br>
+            <input type="number" name="score"/><br>
+            이미지 URL<br>
+            <input type="text" name="poster_url"/><br>
+            영화 설명<br>
+            <textarea name="description"></textarea><br>
+            <input type="submit" value="Submit"/>
+        </div>
     </form>
     
 {% endblock %}
